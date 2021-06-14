@@ -9,14 +9,16 @@ function ColorList() {
     "hotpink",
   ];
 
+  const colorEle = colors.map(color =>{
+   return <li key={color} style={{ color: colors }}>{color}</li>
+  });
+
   return (
     <div>
       <h1>Top 5 CSS Colors</h1>
-      <li style={{ color: colors[0] }}>{colors[0]}</li>
-      <li style={{ color: colors[1] }}>{colors[1]}</li>
-      <li style={{ color: colors[2] }}>{colors[2]}</li>
-      <li style={{ color: colors[3] }}>{colors[3]}</li>
-      <li style={{ color: colors[4] }}>{colors[4]}</li>
+      <ol>
+        {colorEle}
+      </ol> 
     </div>
   );
 }
